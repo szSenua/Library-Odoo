@@ -66,4 +66,26 @@ class LibraryBook(models.Model):
                 # No active loans, book is available
                 book.state = 'available'
 
+    # Method to open loan wizard
+    def action_loan_book(self):
+        """ Action to loan the book """
+        return {
+            'name': _('Loan Book'),
+            'type': 'ir.actions.act_window',
+            'res_model': 'library.loan',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_book_id': self.id,
+            },
+        }
     
+    # Method to search the active loan of the book and set it as returned
+    def action_return_book(self):
+        """ Action to return the book """
+        active_loan = self.loan_ids.filtered(lambda l: l.state in ['ongoing', 'overdue'])
+        if active_loan:
+            active_loan.write({
+                'return_date': fields.Date.context_today(self),
+                'state': 'returned'
+            })

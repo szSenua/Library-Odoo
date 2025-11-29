@@ -10,6 +10,17 @@
                 <header>
                     <field name="state" widget="statusbar"
                         statusbar_visible="available,loaned,overdue" />
+                        <!-- Buttons to loan and return books -->
+                    <button name="action_loan_book"
+                        string="Loan"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'available'" />
+                    <button name="action_return_book"
+                        string="Return"
+                        type="object"
+                        class="btn-success"
+                        invisible="state == 'available'" />
                 </header>
                 <sheet>
                     <group>
