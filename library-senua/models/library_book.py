@@ -1,4 +1,4 @@
-from odoo import _, fields, models
+from odoo import _, fields, models, api
 
 class LibraryBook(models.Model):
     # Book model definition
@@ -26,4 +26,26 @@ class LibraryBook(models.Model):
 
     # Book cover field
     cover = fields.Image(string='Book Cover')
+
+    # See the loans associated with this book
+    loan_ids = fields.One2many(
+        'library.loan', 
+        'book_id', 
+        string='Loans')
+    
+    # Calculate if the book is currently available
+    is_available = fields.Boolean(
+        string='Is Available',
+        compute='_compute_is_available',
+        store=True)
+    
+    # Compute method to determine availability
+    @api.depends('loan_ids.state')
+    def _compute_is_available(self):
+        for book in self:
+            # Check if there are any ongoing loans for this book
+            ongoing_loans = book.loan_ids.filtered(lambda loan: loan.state == 'ongoing')
+            # If there are no ongoing loans, the book is available
+            book.is_available = len(ongoing_loans) == 0
+
     

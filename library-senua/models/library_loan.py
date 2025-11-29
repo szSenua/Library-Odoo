@@ -1,4 +1,5 @@
 from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError
 
 class LibraryLoan(models.Model):
     _name = 'library.loan'
@@ -15,3 +16,22 @@ class LibraryLoan(models.Model):
         ('overdue', 'Overdue')
     ], string='Status', default='ongoing', required=True)
     notes = fields.Text(string='Notes')
+
+    # Constraint to prevent loaning a book that is already on loan
+    @api.constrains('book_id', 'state')
+    def _check_book_availability(self):
+        # Only check for ongoing loans
+        for loan in self:
+            # Check if the loan is ongoing
+            if loan.state == 'ongoing':
+                # Look for other ongoing loans for the same book
+                ongoing_loans = self.search([
+                    ('book_id', '=', loan.book_id.id),
+                    ('state', '=', 'ongoing'),
+                    ('id', '!=', loan.id)
+                ])
+                # If there are any, raise a validation error
+                if ongoing_loans:
+                    raise ValidationError(_("This book is already on loan."))
+                
+                
