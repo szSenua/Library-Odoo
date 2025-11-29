@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    
+    <!-- Main Menu -->
+    <menuitem id="menu_library_root"
+              name="Library"
+              sequence="10"
+              web_icon="library_odoo/library_senua/static/description/icon.png" />
+
+    <!-- Books Menu -->
+    <menuitem id="menu_library_books"
+              name="Books"
+              parent="menu_library_root"
+              sequence="10"/>
+
+    <menuitem id="menu_library_book_list"
+              name="Books"
+              parent="menu_library_books"
+              action="action_library_book"
+              sequence="10"/>
+</odoo>

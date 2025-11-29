@@ -13,6 +13,9 @@
         "base",
     ],
     "data": [
-        
+        "security/library_security.xml",
+        "security/ir.model.access.csv",
+        "views/library_menus.xml",
+        "views/library_book_views.xml",
     ],
 }

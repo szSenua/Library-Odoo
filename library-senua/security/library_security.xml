@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Categories -->
+        <record id="module_category_library" model="ir.module.category">
+            <field name="name">Library</field>
+            <field name="description">Library Management</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <!-- Group: Library User (Read Only) -->
+        <record id="group_library_user" model="res.groups">
+            <field name="name">Library User</field>
+            <field name="category_id" ref="module_category_library"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="comment">Can only view library data</field>
+        </record>
+
+        <!-- Group: Library Operator -->
+        <record id="group_library_operator" model="res.groups">
+            <field name="name">Library Operator</field>
+            <field name="category_id" ref="module_category_library"/>
+            <field name="implied_ids" eval="[(4, ref('group_library_user'))]"/>
+            <field name="comment">Can view books and manage loans/returns</field>
+        </record>
+
+        <!-- Group: Library Manager -->
+        <record id="group_library_manager" model="res.groups">
+            <field name="name">Library Manager</field>
+            <field name="category_id" ref="module_category_library"/>
+            <field name="implied_ids" eval="[(4, ref('group_library_operator'))]"/>
+            <field name="comment">Full access to library management</field>
+        </record>
+
+</odoo>
