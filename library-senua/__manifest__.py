@@ -18,5 +18,6 @@
         "views/library_book_views.xml",
         "views/library_loan_views.xml",
         "views/library_menus.xml",
+        "wizard/library_loan_wizard_views.xml",
     ],
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Wizard Form View -->
+    <record id="view_library_loan_wizard_form" model="ir.ui.view">
+        <field name="name">library.loan.wizard.form</field>
+        <field name="model">library.loan.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Loan Book">
+                <group>
+                    <field name="book_id" />
+                    <field name="book_isbn" readonly="1" />
+                    <field name="borrower_id" />
+                    <field name="loan_date" />
+                    <field name="notes" />
+                </group>
+                <footer>
+                    <button string="Confirm"
+                        name="action_confirm_loan"
+                        type="object"
+                        class="btn-primary" />
+                    <button string="Cancel"
+                        class="btn-secondary"
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
