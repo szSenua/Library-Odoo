@@ -33,6 +33,14 @@ class LibraryBook(models.Model):
         'book_id', 
         string='Loans')
     
+    # Book status based on loan state
+    state = fields.Selection([
+        ('available', 'Available'),
+        ('loaned', 'On Loan'),
+        ('overdue', 'Overdue')
+    ], string='Status', compute='_compute_state', store=True, readonly=True)
+    
+    
     # Calculate if the book is currently available
     is_available = fields.Boolean(
         string='Is Available',
@@ -41,11 +49,21 @@ class LibraryBook(models.Model):
     
     # Compute method to determine availability
     @api.depends('loan_ids.state')
-    def _compute_is_available(self):
+    def _compute_state(self):
         for book in self:
-            # Check if there are any ongoing loans for this book
-            ongoing_loans = book.loan_ids.filtered(lambda loan: loan.state == 'ongoing')
-            # If there are no ongoing loans, the book is available
-            book.is_available = len(ongoing_loans) == 0
+            # Find active loans (ongoing or overdue)
+            active_loans = book.loan_ids.filtered(
+                lambda l: l.state in ['ongoing', 'overdue']
+            )
+            
+            if active_loans:
+                # If any loan is overdue, the book state is overdue
+                if any(loan.state == 'overdue' for loan in active_loans):
+                    book.state = 'overdue'
+                else:
+                    book.state = 'loaned'
+            else:
+                # No active loans, book is available
+                book.state = 'available'
 
     

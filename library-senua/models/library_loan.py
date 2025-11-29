@@ -33,5 +33,3 @@ class LibraryLoan(models.Model):
                 # If there are any, raise a validation error
                 if ongoing_loans:
                     raise ValidationError(_("This book is already on loan."))
-                
-                

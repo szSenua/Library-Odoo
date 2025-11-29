@@ -7,6 +7,10 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <form string="">
+                <header>
+                    <field name="state" widget="statusbar"
+                        statusbar_visible="available,loaned,overdue" />
+                </header>
                 <sheet>
                     <group>
                         <field name="name" />
@@ -22,7 +26,8 @@
     </record>
 
 
-    <!--Library Book List View -->
+    <!--Library
+    Book List View -->
     <record id="library_book_view_list" model="ir.ui.view">
         <field name="name">library_book.view.list</field>
         <field name="model">library.book</field>
