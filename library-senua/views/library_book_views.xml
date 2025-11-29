@@ -10,7 +10,7 @@
                 <header>
                     <field name="state" widget="statusbar"
                         statusbar_visible="available,loaned,overdue" />
-                        <!-- Buttons to loan and return books -->
+                    <!-- Buttons to loan and return books -->
                     <button name="action_loan_book"
                         string="Loan"
                         type="object"
@@ -23,14 +23,29 @@
                         invisible="state == 'available'" />
                 </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Book Title" />
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name" />
-                        <field name="author_id" />
-                        <field name="release_date" />
-                        <field name="isbn" />
-                        <field name="summary" />
-                        <field name="cover" />
+                        <group>
+                            <field name="author_id" />
+                            <field name="release_date" />
+                            <field name="isbn" />
+                        </group>
+                        <group>
+                            <div style="text-align: right;">
+                                <field name="cover" widget="image" nolabel="1"
+                                    options="{'size': [150, 225]}" readonly="1" />
+                            </div>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="Summary">
+                            <field name="summary" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
