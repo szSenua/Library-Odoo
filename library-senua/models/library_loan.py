@@ -28,6 +28,7 @@ class LibraryLoan(models.Model):
         store=True
         )
     
+    # Compute method to determine loan state
     @api.depends('loan_date', 'return_date', 'is_late')
     def _compute_state(self):
         for loan in self:

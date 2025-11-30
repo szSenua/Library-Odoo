@@ -26,6 +26,13 @@ class LibraryBook(models.Model):
         'book_id', 
         string='Loans')
     
+    # Editions associated with this book
+    edition_ids = fields.One2many(
+        'library.edition',
+        'book_id',
+        string='Editions'
+    )
+
     # Book status based on loan state
     state = fields.Selection([
         ('available', 'Available'),
