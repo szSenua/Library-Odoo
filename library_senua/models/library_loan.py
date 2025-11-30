@@ -5,6 +5,24 @@ class LibraryLoan(models.Model):
     _name = 'library.loan'
     _description = 'Library Loan'
     
+    # Computed name field
+    name = fields.Char(
+        string='Loan Reference',
+        compute='_compute_name',
+        store=True,
+    )
+    
+    @api.depends('book_id', 'borrower_id', 'loan_date')
+    # Method to compute the name of the loan record
+    def _compute_name(self):
+        for loan in self:
+            # Construct the name as "Book Name - Borrower Name
+            if loan.book_id and loan.borrower_id:
+                loan.name = f"{loan.book_id.name} - {loan.borrower_id.name}"
+            else:
+                # Fallback name if book or borrower is missing
+                loan.name = f"Loan {loan.id or 'New'}"
+
     # Book being loaned
     book_id = fields.Many2one('library.book', string='Book', required=True)
     # Borrower of the book
