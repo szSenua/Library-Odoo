@@ -30,7 +30,16 @@ class LibraryBook(models.Model):
     edition_ids = fields.One2many(
         'library.edition',
         'book_id',
-        string='Editions'
+        string='Editions',
+    )
+
+    # company_id field to link to multi-company
+    company_id = fields.Many2one(
+        'res.company',
+        string='Company',
+        # Set default to current user's company
+        default=lambda self: self.env.company,
+        required=True
     )
 
     # Book status based on loan state
