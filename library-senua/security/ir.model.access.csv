@@ -5,3 +5,6 @@ access_library_book_manager,library.book.manager,model_library_book,group_librar
 access_library_loan_user,library.loan.user,model_library_loan,group_library_user,1,0,0,0
 access_library_loan_operator,library.loan.operator,model_library_loan,group_library_operator,1,1,1,0
 access_library_loan_manager,library.loan.manager,model_library_loan,group_library_manager,1,1,1,1
+access_library_loan_wizard_user,library.loan.wizard.user,model_library_loan_wizard,group_library_user,1,1,1,0
+access_library_loan_wizard_operator,library.loan.wizard.operator,model_library_loan_wizard,group_library_operator,1,1,1,0
+access_library_loan_wizard_manager,library.loan.wizard.manager,model_library_loan_wizard,group_library_manager,1,1,1,1
