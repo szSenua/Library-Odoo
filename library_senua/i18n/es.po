@@ -1,0 +1,360 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* library_senua
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-30 16:27+0000\n"
+"PO-Revision-Date: 2025-11-30 16:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: library_senua
+#: model:ir.ui.menu,name:library_senua.menu_library_loan_list
+msgid "All Loans"
+msgstr "Préstamos"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__author_id
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "Author"
+msgstr "Autor"
+
+#. module: library_senua
+#: model:ir.model.fields.selection,name:library_senua.selection__library_book__state__available
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "Available"
+msgstr "Disponible"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__book_id
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__book_id
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__book_id
+msgid "Book"
+msgstr "Libro"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__cover
+msgid "Book Cover"
+msgstr "Portada"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Book Title"
+msgstr "Título"
+
+#. module: library_senua
+#: model:ir.actions.act_window,name:library_senua.action_library_book
+#: model:ir.ui.menu,name:library_senua.menu_library_book_list
+#: model:ir.ui.menu,name:library_senua.menu_library_books
+msgid "Books"
+msgstr "Libros"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__borrower_id
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__borrower_id
+msgid "Borrower"
+msgstr "Prestatario"
+
+#. module: library_senua
+#: model:res.groups,comment:library_senua.group_library_user
+msgid "Can only view library data"
+msgstr "Sólo puede ver los datos de la biblioteca"
+
+#. module: library_senua
+#: model:res.groups,comment:library_senua.group_library_operator
+msgid "Can view books and manage loans/returns"
+msgstr "Puede ver los libros y gestionar préstamos/devoluciones "
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_wizard_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: library_senua
+#: model_terms:ir.actions.act_window,help:library_senua.action_library_book
+msgid "Create your first book!"
+msgstr "¡Crea tu primer libro!"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__create_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__create_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__create_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__create_date
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__create_date
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__create_date
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__days_late
+msgid "Days Late"
+msgstr "Días de retraso"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__display_name
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__display_name
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__display_name
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__name
+msgid "Edition Name"
+msgstr "Nombre de la edición"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__year
+msgid "Edition Year"
+msgstr "Año de la Edición"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__edition_ids
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Editions"
+msgstr "Ediciones"
+
+#. module: library_senua
+#: model:res.groups,comment:library_senua.group_library_manager
+msgid "Full access to library management"
+msgstr "Acceso total a la gestión de la biblioteca"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__id
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__id
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__id
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__id
+msgid "ID"
+msgstr "ID"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__isbn
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__book_isbn
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__book_isbn
+msgid "ISBN"
+msgstr "ISBN"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__is_available
+msgid "Is Available"
+msgstr "Está disponible"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__is_late
+msgid "Is Late"
+msgstr "En retraso"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__write_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__write_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__write_uid
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__write_date
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__write_date
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__write_date
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: library_senua
+#: model:ir.module.category,name:library_senua.module_category_library
+#: model:ir.ui.menu,name:library_senua.menu_library_root
+msgid "Library"
+msgstr "Biblioteca"
+
+#. module: library_senua
+#: model:ir.model,name:library_senua.model_library_book
+msgid "Library Book"
+msgstr "Libro de la Biblioteca"
+
+#. module: library_senua
+#: model:ir.model,name:library_senua.model_library_edition
+msgid "Library Edition"
+msgstr "Edición de la Biblioteca"
+
+#. module: library_senua
+#: model:ir.model,name:library_senua.model_library_loan
+msgid "Library Loan"
+msgstr "Préstamo de la Biblioteca"
+
+#. module: library_senua
+#: model:ir.model,name:library_senua.model_library_loan_wizard
+msgid "Library Loan Wizard"
+msgstr "Asistente de Préstamo de la Biblioteca"
+
+#. module: library_senua
+#: model:ir.module.category,description:library_senua.module_category_library
+msgid "Library Management"
+msgstr "Gestión de la Biblioteca"
+
+#. module: library_senua
+#: model:res.groups,name:library_senua.group_library_manager
+msgid "Library Manager"
+msgstr "Administrador de la Biblioteca"
+
+#. module: library_senua
+#: model:res.groups,name:library_senua.group_library_operator
+msgid "Library Operator"
+msgstr "Encargado de la Biblioteca"
+
+#. module: library_senua
+#: model:res.groups,name:library_senua.group_library_user
+msgid "Library User"
+msgstr "Usuario de la Biblioteca"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Loan"
+msgstr "Prestar"
+
+#. module: library_senua
+#. odoo-python
+#: code:addons/library_senua/models/library_book.py:0
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_wizard_form
+msgid "Loan Book"
+msgstr "Libro de Préstamo"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__loan_date
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__loan_date
+msgid "Loan Date"
+msgstr "Fecha del Préstamo"
+
+#. module: library_senua
+#: model:ir.actions.act_window,name:library_senua.action_library_loan
+#: model:ir.model.fields,field_description:library_senua.field_library_book__loan_ids
+#: model:ir.ui.menu,name:library_senua.menu_library_loans
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Loans"
+msgstr "Préstamos"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_pivot
+msgid "Loans Analysis"
+msgstr "Análisis de Préstamos"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_calendar
+msgid "Loans Calendar"
+msgstr "Calendario de Préstamos"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_graph
+msgid "Loans Statistics"
+msgstr "Estadísticas de Préstamos"
+
+#. module: library_senua
+#: model_terms:ir.actions.act_window,help:library_senua.action_library_loan
+msgid "Manage library loans here!"
+msgstr "¡Gestiona tus préstamos de biblioteca aquí!"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__notes
+#: model:ir.model.fields,field_description:library_senua.field_library_loan_wizard__notes
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_loan_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_edition__copies
+msgid "Number of Copies"
+msgstr "Número de Copias"
+
+#. module: library_senua
+#: model:ir.model.fields.selection,name:library_senua.selection__library_book__state__loaned
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "On Loan"
+msgstr "En préstamo"
+
+#. module: library_senua
+#: model:ir.model.fields.selection,name:library_senua.selection__library_loan__state__ongoing
+msgid "Ongoing"
+msgstr "En curso"
+
+#. module: library_senua
+#: model:ir.model.fields.selection,name:library_senua.selection__library_book__state__overdue
+#: model:ir.model.fields.selection,name:library_senua.selection__library_loan__state__overdue
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "Overdue"
+msgstr "Pendiente de devolución"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__release_date
+msgid "Release Date"
+msgstr "Fecha de Lanzamiento"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Return"
+msgstr "Devolver"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__return_date
+msgid "Return Date"
+msgstr "Fecha de Devolución"
+
+#. module: library_senua
+#: model:ir.model.fields.selection,name:library_senua.selection__library_loan__state__returned
+msgid "Returned"
+msgstr "Devuelto"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "Search Books"
+msgstr "Búsqueda de libros"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "State"
+msgstr "Estado"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__state
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__summary
+#: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: library_senua
+#. odoo-python
+#: code:addons/library_senua/models/library_loan.py:0
+msgid "This book is already on loan."
+msgstr "Este libro esse encuentra ya en préstamo"
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_book__name
+#: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
+msgid "Title"
+msgstr "Título"
