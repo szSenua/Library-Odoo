@@ -14,6 +14,7 @@
     ],
     "data": [
         'security/library_security.xml',
+        'security/library_record_rules.xml',
         'security/ir.model.access.csv',           
         'views/library_edition_views.xml',        
         'views/library_book_views.xml',           
