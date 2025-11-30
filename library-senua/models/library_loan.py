@@ -20,6 +20,14 @@ class LibraryLoan(models.Model):
         ('overdue', 'Overdue')
         ], string='Status', compute='_compute_state', store=True, readonly=False)
     
+    # ISBN field
+    book_isbn = fields.Char(
+        related='book_id.isbn',
+        string='ISBN',
+        readonly=True,
+        store=True
+        )
+    
     @api.depends('loan_date', 'return_date', 'is_late')
     def _compute_state(self):
         for loan in self:

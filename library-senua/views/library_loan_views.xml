@@ -10,6 +10,7 @@
                     <group>
                         <group>
                             <field name="book_id" />
+                            <field name="book_isbn"/>
                             <field name="borrower_id" />
                         </group>
                         <group>
@@ -37,6 +38,7 @@
         <field name="arch" type="xml">
             <list>
                 <field name="book_id" />
+                <field name="book_isbn"/>
                 <field name="borrower_id" />
                 <field name="loan_date" />
                 <field name="return_date" />
