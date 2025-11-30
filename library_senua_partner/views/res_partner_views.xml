@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Inherit Partner Form View -->
+    <record id="view_partner_form_author" model="ir.ui.view">
+        <field name="name">res.partner.form.author</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <!-- Add is_author field after VAT -->
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_author" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

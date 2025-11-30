@@ -14,7 +14,7 @@ class LibraryBook(models.Model):
     isbn = fields.Char(string='ISBN')
     # Book author field with domain filter, res partner means it links to contacts model
     author_id = fields.Many2one(
-        'res.partner', string='Author', domain=[('is_company', '=', True)])
+    'res.partner', string='Author', domain=[('is_author', '=', True)])
     
     # Book summary field
     summary = fields.Text(string='Summary')
