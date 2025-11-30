@@ -90,6 +90,32 @@
         </field>
     </record>
 
+    <!-- Search View -->
+    <record id="view_library_book_search" model="ir.ui.view">
+        <field name="name">library.book.search</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <search string="Search Books">
+                <!-- Search by title or author -->
+                <field name="name" string="Title" filter_domain="[('name','ilike',self)]" />
+                <field name="author_id" string="Author" />
+                <field name="isbn" />
+
+                <!-- Filters -->
+                <filter string="Available" name="filter_available"
+                    domain="[('state','=','available')]" />
+                <filter string="On Loan" name="filter_loaned" domain="[('state','=','loaned')]" />
+                <filter string="Overdue" name="filter_overdue" domain="[('state','=','overdue')]" />
+
+                <separator />
+
+                <!-- Group by -->
+                <filter string="Author" name="group_author" context="{'group_by':'author_id'}" />
+                <filter string="State" name="group_state" context="{'group_by':'state'}" />
+            </search>
+        </field>
+    </record>
+
     <!-- Action Window -->
     <record id="action_library_loan" model="ir.actions.act_window">
         <field name="name">Loans</field>
