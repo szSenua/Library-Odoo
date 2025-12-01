@@ -369,7 +369,7 @@ msgstr "Pendiente de devolución"
 #. module: library_senua
 #: model:ir.model.fields,field_description:library_senua.field_library_book__release_date
 msgid "Release Date"
-msgstr "Fecha de Lanzamiento"
+msgstr "Fecha de publicación"
 
 #. module: library_senua
 #: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
