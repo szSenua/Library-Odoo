@@ -1,4 +1,5 @@
 from odoo import _, fields, models, api
+from odoo.exceptions import ValidationError
 
 class LibraryBook(models.Model):
     # Book model definition
@@ -11,7 +12,24 @@ class LibraryBook(models.Model):
     # Book date field
     release_date = fields.Date(string='Release Date')
     # Book ISBN field
-    isbn = fields.Char(string='ISBN')
+    isbn = fields.Char(string='ISBN', required=True)
+
+    # Constraint to ensure ISBN uniqueness
+    @api.constrains('isbn')
+    def _check_isbn_unique(self):
+        for book in self:
+            # Only check if ISBN is set
+            if book.isbn:  
+                duplicate = self.search([
+                    ('isbn', '=', book.isbn),
+                    ('id', '!=', book.id)
+                ], limit=1)
+                if duplicate:
+                    raise ValidationError(
+                        _('This ISBN "%s" is already being used by the book "%s"') 
+                        % (book.isbn, duplicate.name)
+                    )
+
     # Book author field with domain filter, res partner means it links to contacts model
     author_id = fields.Many2one(
     'res.partner', string='Author', domain=[('is_author', '=', True)])

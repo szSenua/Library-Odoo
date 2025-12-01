@@ -18,10 +18,10 @@
             <t t-foreach="docs" t-as="loan">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <h2 class="text-center">Loan Receipt / Resguardo de Préstamo</h2>
+                        <h2 class="text-center">Loan Receipt</h2>
                         <div class="row mt32 mb32">
                             <div class="col-6">
-                                <strong>Book / Libro:</strong>
+                                <strong>Book:</strong>
                                 <br />
                                 <span t-field="loan.book_id.name" />
                             </div>
@@ -33,19 +33,19 @@
                         </div>
                         <div class="row mb32">
                             <div class="col-6">
-                                <strong>Borrower / Prestatario:</strong>
+                                <strong>Borrower:</strong>
                                 <br />
                                 <span t-field="loan.borrower_id.name" />
                             </div>
                             <div class="col-6">
-                                <strong>Loan Date / Fecha de Préstamo:</strong>
+                                <strong>Loan Date:</strong>
                                 <br />
                                 <span t-field="loan.loan_date" />
                             </div>
                         </div>
                         <div class="row mb32" t-if="loan.notes">
                             <div class="col-12">
-                                <strong>Notes / Observaciones:</strong>
+                                <strong>Notes:</strong>
                                 <br />
                                 <span t-field="loan.notes" />
                             </div>
@@ -53,11 +53,11 @@
                         <div class="row mt64">
                             <div class="col-12 text-center">
                                 <p>
-                                    <strong>Borrower Signature / Firma del Prestatario:</strong>
+                                    <strong>Borrower Signature:</strong>
                                 </p>
                                 <div
                                     style="border-top: 1px solid black; margin-top: 80px; padding-top: 5px; width: 50%; margin-left: auto; margin-right: auto;">
-                                    Signature / Firma
+                                    Signature
                                 </div>
                             </div>
                         </div>

@@ -6,14 +6,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-30 16:27+0000\n"
-"PO-Revision-Date: 2025-11-30 16:27+0000\n"
+"POT-Creation-Date: 2025-12-01 08:49+0000\n"
+"PO-Revision-Date: 2025-12-01 08:49+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid ""
+"<strong>Book:</strong>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid "<strong>Borrower Signature:</strong>"
+msgstr ""
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid ""
+"<strong>Borrower:</strong>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid ""
+"<strong>ISBN:</strong>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid ""
+"<strong>Loan Date:</strong>\n"
+"                                <br/>"
+msgstr ""
+
+#. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid ""
+"<strong>Notes:</strong>\n"
+"                                <br/>"
+msgstr ""
 
 #. module: library_senua
 #: model:ir.ui.menu,name:library_senua.menu_library_loan_list
@@ -248,6 +288,17 @@ msgid "Loan Date"
 msgstr ""
 
 #. module: library_senua
+#: model:ir.actions.report,name:library_senua.action_report_library_loan
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid "Loan Receipt"
+msgstr ""
+
+#. module: library_senua
+#: model:ir.model.fields,field_description:library_senua.field_library_loan__name
+msgid "Loan Reference"
+msgstr ""
+
+#. module: library_senua
 #: model:ir.actions.act_window,name:library_senua.action_library_loan
 #: model:ir.model.fields,field_description:library_senua.field_library_book__loan_ids
 #: model:ir.ui.menu,name:library_senua.menu_library_loans
@@ -331,6 +382,11 @@ msgid "Search Books"
 msgstr ""
 
 #. module: library_senua
+#: model_terms:ir.ui.view,arch_db:library_senua.report_loan_receipt
+msgid "Signature"
+msgstr ""
+
+#. module: library_senua
 #: model_terms:ir.ui.view,arch_db:library_senua.view_library_book_search
 msgid "State"
 msgstr ""
@@ -345,6 +401,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:library_senua.field_library_book__summary
 #: model_terms:ir.ui.view,arch_db:library_senua.library_book_view_form
 msgid "Summary"
+msgstr ""
+
+#. module: library_senua
+#. odoo-python
+#: code:addons/library_senua/models/library_book.py:0
+msgid "This ISBN \"%s\" is already being used by the book \"%s\""
 msgstr ""
 
 #. module: library_senua
