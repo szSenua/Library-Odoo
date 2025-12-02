@@ -4,7 +4,7 @@ from odoo.tests.common import TransactionCase
 from odoo.exceptions import ValidationError
 
 # Test return late functionality in library.book model
-class TestIsbnUniqueness(TransactionCase):
+class TestReturnLate(TransactionCase):
     
     def test_return_late(self):
 
