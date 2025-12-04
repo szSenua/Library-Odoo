@@ -4,6 +4,7 @@ from odoo.exceptions import ValidationError
 class LibraryLoan(models.Model):
     _name = 'library.loan'
     _description = 'Library Loan'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     
     # Computed name field
     name = fields.Char(

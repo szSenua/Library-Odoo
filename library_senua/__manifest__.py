@@ -10,7 +10,7 @@
     "license": "AGPL-3",
     "installable": True,
     "depends": [
-        "base",
+        "base", "mail",
     ],
     "data": [
         'security/library_security.xml',

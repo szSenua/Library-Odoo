@@ -20,17 +20,17 @@ class TestCannotLoanBookTwice(TransactionCase):
         })
         
         # First loan
-        loan1 = self.env['library.loan'].create({
+        loan = self.env['library.loan'].create({
             'book_id': book.id,
             'borrower_id': borrower_one.id,
             'loan_date': date.today(),
         })
         
-        print(f"\n First loan created: {loan1.id} (state: {loan1.state})")
+        print(f"\n First loan created: {loan.id} (state: {loan.state})")
         
         # Attempt second loan of the same book - should fail
         with self.assertRaises(ValidationError) as e:
-            loan2 = self.env['library.loan'].create({
+            loan_two = self.env['library.loan'].create({
                 'book_id': book.id,
                 'borrower_id': borrower_two.id,
                 'loan_date': date.today(),
